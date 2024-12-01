@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EgzaminMauiApp.MainPage">
+
+    <StackLayout BackgroundColor="Khaki">
+        <Label Text="Sumator czasów" FontSize="Large" TextColor="Gray" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+        <HorizontalStackLayout Margin="0,20,0,60">
+            <Label Text="Łączny czas (m:s):" TextColor="Gray" Margin="5,0,5,0"/>
+            <Label x:Name="ResultLabel" TextColor="Gray"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="End">
+            <Label Text="Nowy czas (m:s): "  Margin="0,0,10,0" VerticalTextAlignment="Center" TextColor="Gray"/>
+            <Entry x:Name="MinutesEntry" HeightRequest="10" WidthRequest="100" Margin="0, 0, 10, 0" TextColor="Black"/>
+            <Entry x:Name="SecondsEntry" HeightRequest="10" WidthRequest="100" TextColor="Black"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="End" Margin="0,5,0,0">
+            <Button Text="DOLICZ" BackgroundColor="Green" HeightRequest="10" WidthRequest="100"  Margin="0,0,10,0"
+                    Clicked="Button_Clicked_Add" />
+            <Button Text="RESET" BackgroundColor="Red" HeightRequest="10" WidthRequest="100"
+                    Clicked="Button_Clicked_Reset" />
+        </HorizontalStackLayout>
+
+    </StackLayout>
+</ContentPage>
